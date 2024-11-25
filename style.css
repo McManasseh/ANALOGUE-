@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    background: goldenrod;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 5px solid black;
+    border-radius: 60%;
+    background: #fff;
+}
+
+.container .clock {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate(0%, -5%);
+    top: 50%;
+    left: 50%;
+}
+
+.container .time {
+    position: relative;
+    top: 5%;
+    transform-origin: center;
+    transform: rotate(calc(var(--i) * 30deg));
+    left: -50%;
+    
+}
+.container .brand {
+    padding: -10px 60px;
+    margin-top: 60%;
+    text-align: center;
+}
+
+.container .brand p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.container .time span{
+    position: absolute;
+    top: -140px;
+    left: 50%;
+    transform: translateX(-50%) rotate(calc(var(--i) * -30deg));
+}
+
+.container .hour-hand,
+.container .minute-hand,
+.container .second-hand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: #000;
+    border-radius: 50px;
+    transform-origin: bottom center;
+    transform: translate(-50%, -100%) rotate(90deg);
+}
+
+.container .hour-hand{
+    height: 70px;
+    width: 6px;
+    top: 80px;
+    left: 147px;
+    
+}
+.container .minute-hand{
+    height: 100px;
+    width: 4px;
+    top: 50px;
+    left: 148px; 
+
+
+}
+
+.container .second-hand{
+    height: 110px;
+    width: 2px;
+    background: red;
+    top: 40px;
+    left: 149px; 
+    
+}
+
+.container .center-dot{
+    position: absolute;
+    background: #000;
+    border-radius: 50%;
+    top: 145px;
+    left: 145px;
+    width: 10px;
+    height: 10px;
+}
+
+
